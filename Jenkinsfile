@@ -4,7 +4,7 @@ pipeline {
         stage('Run PowerShell Script') {
             steps {
                 echo 'Hello World'
-                echo '${WORKSPACE}'
+                echo "${WORKSPACE}"
                 powershell(script: 'test.ps1')
             }
         }
