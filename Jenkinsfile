@@ -6,9 +6,9 @@ pipeline {
                 echo 'Hello World'
                 echo "${WORKSPACE}"
                 script {
-                    dir("${WORKSPACE}") {
+                    //dir("${WORKSPACE}") {
                         pwsh "${WORKSPACE}/test.ps1"
-                    }
+                    //}
                 }
                 // powershell(script: 'test.ps1')
             }
