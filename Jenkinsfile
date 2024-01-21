@@ -3,12 +3,11 @@ pipeline {
     stages {
         stage('Run PowerShell Script') {
             steps {
-                echo 'Hello World'
+                echo 'Hello World again'
                 echo "${WORKSPACE}"
-                //script {
-                //    pwsh "${WORKSPACE}/test.ps1"
-                //}
-                powershell(script: "${WORKSPACE}/test.ps1")
+                script {
+                    pwsh "${WORKSPACE}/test.ps1"
+                }
             }
         }
     }
