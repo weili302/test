@@ -5,12 +5,10 @@ pipeline {
             steps {
                 echo 'Hello World'
                 echo "${WORKSPACE}"
-                script {
-                    //dir("${WORKSPACE}") {
-                        pwsh "${WORKSPACE}/test.ps1"
-                    //}
-                }
-                // powershell(script: 'test.ps1')
+                //script {
+                //    pwsh "${WORKSPACE}/test.ps1"
+                //}
+                powershell(script: "${WORKSPACE}/test.ps1")
             }
         }
     }
