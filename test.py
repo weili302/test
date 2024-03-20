@@ -1,30 +1,16 @@
-import os
+import logging
 
-# Function to set the directory named 'infradevops' as the root directory
-def set_root_dir():
-    # Get the current working directory
-    current_path = os.getcwd()
-    
-    # Split the path into parts
-    path_parts = current_path.split(os.sep)
-    
-    # Initialize root directory
-    root_dir = None
-    
-    # Iterate over the parts of the path
-    for part in path_parts:
-        # Check if the part is 'infradevops'
-        if part.lower() == 'infradevops':
-            # Set the root directory
-            root_dir = os.path.join(os.sep, *path_parts[:path_parts.index(part)+1])
-            break
-    
-    # If 'infradevops' directory is found, change the current working directory
-    if root_dir:
-        os.chdir(root_dir)
-        return f"Root directory set to: {root_dir}"
-    else:
-        return "Directory named 'infradevops' not found in the current path."
+# 配置日志记录器，设置日志级别和日志格式
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                    handlers=[
+                        logging.FileHandler("your_log_file.log"),  # 文件日志
+                        logging.StreamHandler()  # 控制台日志
+                    ])
 
-# Set the root directory and print the result
-print(set_root_dir())
+# 测试日志输出
+logging.debug('这是一个debug信息')
+logging.info('这是一个info信息')
+logging.warning('这是一个warning信息')
+logging.error('这是一个error信息')
+logging.critical('这是一个critical信息')
