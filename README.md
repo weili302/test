@@ -26,3 +26,5 @@ https://landscape.cncf.io/
 总的来说，依赖注入是一种强大的设计模式，可以帮助你编写更灵活、更易于测试和维护的代码。
 
 https://pan.baidu.com/s/1xH5NVPQaD5UjGRgROO8qbw 
+https://drive.google.com/file/d/12TjmtZkl7dzhe4uoDdUSBtJJBIsZrZmY/view?usp=drive_link
+https://drive.google.com/file/d/1pE3vsEhVCspV7PzacnI8N1uBuwsD5gNb/view?usp=drive_link
